@@ -224,7 +224,7 @@ PCにスマートカードリーダを取り付けて、openscコマンドを使
     以上のとおり、公的個人認証APに含まれる証明書は下記の通りまとめることができます。
 
     |ID|名称|英名|発行者<br>(Issuer)|識別子<br>(Subject)|
-    | :- | :- | :- | :- | :- |
+    | :- | :--- | :- | :- | :- |
     |1|認証用<br>証明書|User<br>Authentication<br>Certificate|C=JP, O=JPKI,<br>OU=JPKI for user authentication,<br>OU=Japan Agency for Local Authority Information Systems|C=JP, CN=...|
     |2|署名用<br>証明書|Digital<br>Signature<br>Certificate|C=JP, O=JPKI,<br>OU=JPKI for digital signature,<br>OU=Japan Agency for Local Authority Information Systems|C=JP, L=XX-ken, L=XX-shi,<br>CN=YYYYMMDDhhmmss(発行要求作成日時)xxxxx(シーケンス番号)XXXXXXXXX(受付窓口識別記号)|
     |3|認証用<br>CA証明書|User<br>Authentication<br>Certificate<br>CA|C=JP, O=JPKI,<br>OU=JPKI for user authentication,<br>OU=Japan Agency for Local Authority Information Systems|C=JP, O=JPKI,<br>OU=JPKI for user authentication,<br>OU=Japan Agency for Local Authority Information Systems|
