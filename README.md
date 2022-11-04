@@ -233,13 +233,13 @@ PCにスマートカードリーダを取り付けて、openscコマンドを使
 ### ② OpenSC+SSH
 マイナンバーカードの認証用証明書を使って同一PC上でsshログインを行います。
 
-1. Macでsshdを有効にし、sshログインを行い、ホームディレクトリに「.ssh」フォルダを作成します。
+1. 下記を参考にMacでsshdを有効にし、sshログインを行います。ログインに成功するとホームディレクトリに「.ssh」フォルダを作成されます。
 
     https://pc-karuma.net/mac-ssh-login/
 
 2. マイナンバーカードからssh-rsaの「User Authentication Public Key」を取得します。
 
-    下記コマンドを実行し、一行目をコピーして、ログイン先ユーザのホームディレクトリ配下の「~/.ssh/authorized_keys」に追記します。なければ作成して600のパーミッションで保存します。
+    下記コマンドを実行し、ログイン先ユーザのホームディレクトリ配下の「~/.ssh/authorized_keys」に追記します。なければ作成して600のパーミッションで保存します。
 
     ```
     % ssh-keygen -D /Library/OpenSC/lib/opensc-pkcs11.so
@@ -247,7 +247,11 @@ PCにスマートカードリーダを取り付けて、openscコマンドを使
     ssh-rsa ... User Authentication Public Key
     ssh-rsa ... User Authentication Certificate CA
     ssh-rsa ... Digital Signature Certificate CA
+
+    % ssh-keygen -D /Library/OpenSC/lib/opensc-pkcs11.so >> ~/.ssh/authorized_keys
+    % chmod 600 ~/.ssh/authorized_keys
     ```
+    三行出力されるうちの一行目が機能します。
 
 3. 下記コマンドを実行してsshログインを行います。認証用証明書のPIN入力が求められるので入力するとログインが成功します。
 
