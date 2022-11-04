@@ -52,18 +52,18 @@ PCにスマートカードリーダを取り付けて、openscコマンドを使
 	    ID             : 01
         ...
     PIN [Digital Signature PIN]
-    	Object Flags   : [0x12], modifiable
+        Object Flags   : [0x12], modifiable
 	    ID             : 02
         ...
     Private RSA Key [User Authentication Key]
         ...
-    	Auth ID        : 01
+        Auth ID        : 01
 	    ID             : 01
         ...
     Private RSA Key [Digital Signature Key]
         ...
-    	Auth ID        : 02
-    	ID             : 02
+        Auth ID        : 02
+        ID             : 02
         ...
     Public RSA Key [User Authentication Public Key]
         ...
@@ -91,7 +91,6 @@ PCにスマートカードリーダを取り付けて、openscコマンドを使
         ...
 	    ID             : 04
         ...
-        
     ```
     ここで出力される「User Authentication Certificate」は「認証用証明書」、「Digital Signature Certificate」は「署名用証明書」を表します。
 
